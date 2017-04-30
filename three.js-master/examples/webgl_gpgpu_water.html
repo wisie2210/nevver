@@ -33,8 +33,7 @@
 		<div id="info">
 			<a href="http://threejs.org" target="_blank">three.js</a> - <span id="waterSize"></span> webgl gpgpu water<br/>
 			Select <span id="options"></span> water size<br/>
-			Move mouse to disturb water.<br>
-			Press mouse button to orbit around. 'W' key toggles wireframe.
+
 		</div>
 
 		<script src="../build/three.js"></script>
@@ -352,7 +351,8 @@
 
 				material.lights = true;
 
-				// Material attributes from MeshPhongMaterial
+				debugger;
+								// Material attributes from MeshPhongMaterial
 				material.color = new THREE.Color( materialColor );
 				material.specular = new THREE.Color( 0x111111 );
 				material.shininess = 50;
@@ -369,7 +369,16 @@
 
 				waterUniforms = material.uniforms;
 
-				waterMesh = new THREE.Mesh( geometry, material );
+				// create a loader to get an image from a URL
+				var textureLoader = new THREE.TextureLoader();
+
+				// load in the image
+				textureLoader.load('textures/colors.png', function(texture) {
+				  // set the texture as the map for the material
+				  var thismaterial = new THREE.MeshBasicMaterial( {map: texture} );
+				});
+
+				waterMesh = new THREE.Mesh( geometry, textureLoader );
 				waterMesh.rotation.x = - Math.PI / 2;
 				waterMesh.matrixAutoUpdate = false;
 				waterMesh.updateMatrix();
@@ -386,10 +395,36 @@
 
 
 				// Creates the gpu computation class and sets it up
-
+				debugger;
 				gpuCompute = new GPUComputationRenderer( WIDTH, WIDTH, renderer );
 
 				var heightmap0 = gpuCompute.createTexture();
+
+				// var mesh = new THREE.Mesh(
+    		// 		new THREE.PlaneGeometry( 1, 1, 1, 1 ),
+    		// 		new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('/texture/colors.png') })
+				// 		);
+
+				// var mesh = new THREE.TextureLoader();
+				// mesh.load(
+				// 	// resource URL
+				// 	'textures/colors.png',
+				// 	// Function when resource is loaded
+				// 	function ( texture ) {
+				// 		// do something with the texture
+				// 		var material = new THREE.MeshBasicMaterial( {
+				// 			map: texture
+				// 		 } );
+				// 	},
+				// 	// Function called when download progresses
+				// 	function ( xhr ) {
+				// 		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+				// 	},
+				// 	// Function called when download errors
+				// 	function ( xhr ) {
+				// 		console.log( 'An error happened' );
+				// 	}
+				// );
 
 				fillTexture( heightmap0 );
 
@@ -414,6 +449,8 @@
 
 			function fillTexture( texture ) {
 
+				
+				debugger;
 				var waterMaxHeight = 10;
 
 				function noise( x, y, z ) {
@@ -427,7 +464,7 @@
 					}
 					return r;
 				}
-
+				debugger;
 				var pixels = texture.image.data;
 
 				var p = 0;
@@ -462,7 +499,7 @@
 					gpuCompute.doRenderTarget( smoothShader, currentRenderTarget );
 
 				}
-				
+
 			}
 
 
