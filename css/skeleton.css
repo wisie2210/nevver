@@ -172,6 +172,14 @@ there.
 
   .bp-header__desc-about p {
   }
+
+  .contact-container__graphic {
+    top: 43%;
+  }
+
+  .about-container__graphic {
+    top: 43%;
+  }
 }
 
 @media (max-width: 475px) {
@@ -182,6 +190,18 @@ there.
 
   .bp-header__desc-about p {
     padding: 1em 1em;
+  }
+
+  .contact-container__graphic {
+    top: 50%;
+  }
+
+  .about-container__graphic {
+    top: 50%;
+  }
+
+  .about-container__logo {
+    left: 45%;
   }
 }
 

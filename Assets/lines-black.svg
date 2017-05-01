@@ -3,7 +3,35 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1116.8 550" style="enable-background:new 0 0 1116.8 550;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#231F20;}
+	.st0 {
+	  fill: #000;
+	  animation: iconchange 8s infinite;
+	  animation-timing-function: steps(4, start);
+	  -webkit-animation: iconchange 8s infinite;
+
+	  @keyframes iconchange {
+	    0%   {
+	      fill: #000;
+	      animation-timing-function: steps(1, start);
+	    }
+	    25%  {
+	      fill: #3C2ADD;
+	      animation-timing-function: steps(1, start);
+	    }
+	    50%  {
+	      fill: #54E666;
+	      animation-timing-function: steps(1, start);
+	    }
+	    75%  {
+	      fill: #EF4444;
+	      animation-timing-function: steps(1, start);
+	    }
+	    100% {
+	      fill: #000;
+	      animation-timing-function: steps(1, start);
+	    }
+	  }
+	}
 </style>
 <g>
 	<polygon class="st0" points="1116.8,0 1057.7,0 921.8,549.7 965.1,549.7 	"/>
