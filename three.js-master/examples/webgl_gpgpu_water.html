@@ -332,9 +332,13 @@
 
 			function initWater() {
 
-				var materialColor = 0x0040C0;
+				var materialColor = 0x9CAEF1;
 
 				var geometry = new THREE.PlaneBufferGeometry( BOUNDS, BOUNDS, WIDTH - 1, WIDTH -1 );
+
+
+				var textureLoader = new THREE.TextureLoader();
+  			var thisTexture = textureLoader.load('textures/brick_bump.jpg');
 
 				// material: make a ShaderMaterial clone of MeshPhongMaterial, with customized vertex shader
 				var material = new THREE.ShaderMaterial( {
@@ -346,12 +350,9 @@
 					] ),
 					vertexShader: document.getElementById( 'waterVertexShader' ).textContent,
 					fragmentShader: THREE.ShaderChunk[ 'meshphong_frag' ]
-
 				} );
 
 				material.lights = true;
-
-				debugger;
 								// Material attributes from MeshPhongMaterial
 				material.color = new THREE.Color( materialColor );
 				material.specular = new THREE.Color( 0x111111 );
@@ -370,15 +371,15 @@
 				waterUniforms = material.uniforms;
 
 				// create a loader to get an image from a URL
-				var textureLoader = new THREE.TextureLoader();
+				// var textureLoader = new THREE.TextureLoader();
+				//
+				// // load in the image
+				// textureLoader.load('textures/colors.png', function(texture) {
+				//   // set the texture as the map for the material
+				//   var thismaterial = new THREE.MeshBasicMaterial( {map: texture} );
+				// });
 
-				// load in the image
-				textureLoader.load('textures/colors.png', function(texture) {
-				  // set the texture as the map for the material
-				  var thismaterial = new THREE.MeshBasicMaterial( {map: texture} );
-				});
-
-				waterMesh = new THREE.Mesh( geometry, textureLoader );
+				waterMesh = new THREE.Mesh( geometry, material );
 				waterMesh.rotation.x = - Math.PI / 2;
 				waterMesh.matrixAutoUpdate = false;
 				waterMesh.updateMatrix();
@@ -387,7 +388,26 @@
 
 				// Mesh just for mouse raycasting
 				var geometryRay = new THREE.PlaneBufferGeometry( BOUNDS, BOUNDS, 1, 1 );
-				meshRay = new THREE.Mesh( geometryRay, new THREE.MeshBasicMaterial( { color: 0xFFFFFF, visible: false } ) );
+
+				var imagebrickLoader = new THREE.ImageLoader();
+				var mesh;
+				var materialIMG;
+				var textureSS;
+				imagebrickLoader.load('textures/brick_bump.jpg', function(imageTexture){
+
+					textureSS = new THREE.TextureLoader().load( "textures/brick_bump.jpg" );
+					textureSS.wrapS = THREE.RepeatWrapping;
+					textureSS.wrapT = THREE.RepeatWrapping;
+					textureSS.repeat.set( 4, 4 );
+					materialIMG = new THREE.MeshBasicMaterial({map: imageTexture});
+				  mesh = new THREE.Mesh( textureSS, materialIMG );
+
+				});
+
+
+
+
+				meshRay = new THREE.Mesh( geometryRay, material );
 				meshRay.rotation.x = - Math.PI / 2;
 				meshRay.matrixAutoUpdate = false;
 				meshRay.updateMatrix();
@@ -395,7 +415,6 @@
 
 
 				// Creates the gpu computation class and sets it up
-				debugger;
 				gpuCompute = new GPUComputationRenderer( WIDTH, WIDTH, renderer );
 
 				var heightmap0 = gpuCompute.createTexture();
@@ -449,8 +468,8 @@
 
 			function fillTexture( texture ) {
 
-				
-				debugger;
+
+
 				var waterMaxHeight = 10;
 
 				function noise( x, y, z ) {
@@ -464,7 +483,7 @@
 					}
 					return r;
 				}
-				debugger;
+
 				var pixels = texture.image.data;
 
 				var p = 0;
