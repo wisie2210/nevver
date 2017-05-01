@@ -14,15 +14,69 @@
   font-style: italic;
   font-weight: bold;
   src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-BoldItalic.ttf); }
-.about-container__icon {
-  position: absolute;
-  z-index: 1;
-  width: 50%;
-  left: 25%;
-  top: 35%;
-  display: inline-block;
-  vertical-align: middle; }
+.about-container {
+  width: 100%;
+  height: 100vh;
+  margin-top: 100px; }
+  .about-container__logo {
+    width: 200px;
+    position: absolute;
+    left: 50%; }
+  .about-container__graphic {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    left: 25%;
+    top: 35%;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: .5; }
+    .about-container__graphic img {
+      width: 100%; }
+  .about-container__phrase {
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    left: 25%;
+    bottom: 5%; }
+  .about-container__description {
+    background-color: #f8f8f8;
+    color: #000;
+    height: 450px;
+    position: absolute;
+    margin-top: 100px; }
+    .about-container__description p {
+      padding: 2rem;
+      width: 40%;
+      min-width: 375px;
+      font-size: 18px;
+      line-height: 36px;
+      position: relative;
+      z-index: 99; }
 
+.st0 {
+  fill: #000;
+  animation: iconchange 8s infinite;
+  animation-timing-function: steps(4, start);
+  -webkit-animation: iconchange 8s infinite; }
+@keyframes iconchange {
+  0% {
+    fill: #000;
+    animation-timing-function: steps(1, start); }
+  25% {
+    fill: #3C2ADD;
+    animation-timing-function: steps(1, start); }
+  50% {
+    fill: #54E666;
+    animation-timing-function: steps(1, start); }
+  75% {
+    fill: #EF4444;
+    animation-timing-function: steps(1, start); }
+  100% {
+    fill: #000;
+    animation-timing-function: steps(1, start); } }
 .contact-container {
   width: 100%;
   height: 100vh; }
@@ -56,12 +110,44 @@
   .contact-container__right {
     height: 100%;
     width: 50%;
-    background: #3C2ADD;
+    background: #000;
     display: inline-block;
-    position: absolute; }
-
-/*# sourceMappingURL=style.css.map */
-
+    position: absolute;
+    animation: colorchange 8s infinite;
+    animation-timing-function: steps(4, start);
+    -webkit-animation: colorchange 8s infinite; }
+@keyframes colorchange {
+  0% {
+    background: #000;
+    animation-timing-function: steps(1, start); }
+  25% {
+    background: #3C2ADD;
+    animation-timing-function: steps(1, start); }
+  50% {
+    background: #54E666;
+    animation-timing-function: steps(1, start); }
+  75% {
+    background: #EF4444;
+    animation-timing-function: steps(1, start); }
+  100% {
+    background: #000;
+    animation-timing-function: steps(1, start); } }
+@-webkit-keyframes colorchange {
+  0% {
+    background: #000;
+    animation-timing-function: steps(1, start); }
+  25% {
+    background: #3C2ADD;
+    animation-timing-function: steps(1, start); }
+  50% {
+    background: #54E666;
+    animation-timing-function: steps(1, start); }
+  75% {
+    background: #EF4444;
+    animation-timing-function: steps(1, start); }
+  100% {
+    background: #000;
+    animation-timing-function: steps(1, start); } }
 .gif {
   opacity: 0.2;
   width: 100%;
@@ -71,37 +157,27 @@
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
-}
+  -ms-user-select: none; }
 
-.logo.about{
-  width: 280px;
-  position: relative;
+.logo.contact {
+  width: 120px;
   display: block;
-  float: right;
-  margin-right: 23%;
-}
-.logo.contact{
-  width: 180px;
-  position: absolute;
-  display: block;
-  bottom: 1%;
-  right: 45.4%;
   z-index: 12;
-}
+  margin: auto; }
 
-.logo.main{
+.logo.main {
   width: 280px;
   position: absolute;
   display: block;
   float: right;
   right: 42.6%;
-  top: 2%;
+  top: 2%; }
 
-}
-
-.logoWrapper{
+.logoWrapper {
   z-index: 55;
-  background: white;
-}
+  width: 100%;
+  position: absolute;
+  background: none;
+  bottom: 10%; }
 
+/*# sourceMappingURL=style.css.map */
