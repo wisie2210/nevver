@@ -1,18 +1,26 @@
-/* General Blueprint Style */
-
 @font-face {
-	font-family: 'bpicons';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/bpicons/bpicons.eot');
-	src: url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'), url('../fonts/bpicons/bpicons.woff') format('woff'), url('../fonts/bpicons/bpicons.ttf') format('truetype'), url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');
+    font-family: 'Neue Haas Unica';
+    src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Neue Haas Unica';
+    font-style: italic;
+    src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Italic.ttf);
+}
 
-/* Made with http://icomoon.io/ */
+@font-face {
+    font-family: 'Neue Haas Unica';
+    font-weight: bold;
+    src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Bold.ttf);
+}
 
-
-/* Resets */
+@font-face {
+    font-family: 'Neue Haas Unica';
+    font-style: italic;
+    font-weight: bold;
+    src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-BoldItalic.ttf);
+}
 
 *,
 *:after,
@@ -20,34 +28,21 @@
 	box-sizing: border-box;
 }
 
-
-/* Helper classes */
-
-.cf:before,
-.cf:after {
-	content: ' ';
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-
 /* Main styles */
 
 body {
-	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	background: linear-gradient(45deg, #fff, #dfdaf4);;
+	color: #fff;
+	font-family: 'Neue Haas Unica', Helvetica, Arial, sans-serif;
 	margin: 0;
-	color: #cecece;
-	background: #1d1e21;
+	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
 	text-decoration: none;
-	color: #5c5edc;
+	color: #ef4444;
 	outline: none;
 }
 
@@ -60,6 +55,10 @@ a:hover {
 
 .bp-header {
 	padding: 6em 10vw 2em;
+
+  &-about {
+    padding-top: 5em;
+  }
 }
 
 .bp-header__title {
@@ -70,12 +69,33 @@ a:hover {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: #fff;
+	font-family: 'Neue Haas Unica';
+
+  &-about {
+    color: #000;
+    padding-left: 50%;
+  }
 }
 
 .bp-header__desc {
 	font-size: 0.95em;
 	margin: 0.5em 0 1em;
 	padding: 0;
+
+  &-about {
+    background-color: #f8f8f8;
+    color: #000;
+    margin-top: 8em;
+    height: 400px;
+
+    p {
+      font-size: 1em;
+      line-height: 3em;
+      min-width: 350px;
+      max-width: 600px;
+      padding: 3em 1em;
+    }
+  }
 }
 
 .bp-header__present {
