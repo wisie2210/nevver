@@ -54,3 +54,34 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+.logo.about{
+  width: 280px;
+  position: relative;
+  display: block;
+  float: right;
+  margin-right: 23%;
+}
+.logo.contact{
+  width: 180px;
+  position: absolute;
+  display: block;
+  bottom: 1%;
+  right: 45.4%;
+  z-index: 12;
+}
+
+.logo.main{
+  width: 280px;
+  position: absolute;
+  display: block;
+  float: right;
+  right: 42.6%;
+  top: 2%;
+
+}
+
+.logoWrapper{
+  z-index: 55;
+  background: white;
+}
