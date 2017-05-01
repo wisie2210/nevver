@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Neue Haas Unica';
+  src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Regular.ttf); }
+@font-face {
+  font-family: 'Neue Haas Unica';
+  font-style: italic;
+  src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Italic.ttf); }
+@font-face {
+  font-family: 'Neue Haas Unica';
+  font-weight: bold;
+  src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-Bold.ttf); }
+@font-face {
+  font-family: 'Neue Haas Unica';
+  font-style: italic;
+  font-weight: bold;
+  src: url(../fonts/neue-haas-unica/NeueHaasUnicaPro-BoldItalic.ttf); }
+
+/*# sourceMappingURL=style.css.map */
+
+.gif {
+  opacity: 0.2;
+  width: 100%;
+  position: fixed;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
