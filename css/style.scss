@@ -65,15 +65,7 @@
     position: absolute;
     margin-top: 100px;
 
-    p {
-      padding: 2rem;
-      width: 40%;
-      min-width: 375px;
-      font-size: 18px;
-      line-height: 36px;
-      position: relative;
-      z-index: 99;
-    }
+    
   }
 }
 
@@ -110,6 +102,7 @@
 .contact-container {
   width: 100%;
   height: 100vh;
+  overflow: auto;
 
   &__graphic {
     position: absolute;
@@ -131,7 +124,7 @@
     text-align: center;
     z-index: 1;
     margin: 0 auto;
-    
+
     font-size: 3em;
 
     a {
@@ -155,8 +148,7 @@
     height: 100%;
     width: 50%;
     background: #000;
-    display: inline-block;
-    position: absolute;
+    // position: absolute;
     animation: colorchange 8s infinite;
     animation-timing-function: steps(4, start);
     -webkit-animation: colorchange 8s infinite;
@@ -229,15 +221,7 @@
   margin: auto;
 }
 
-.logo.main{
-  width: 280px;
-  position: absolute;
-  display: block;
-  float: right;
-  right: 42.6%;
-  top: 2%;
 
-}
 
 .logoWrapper{
   z-index: 55;

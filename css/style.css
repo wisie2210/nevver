@@ -242,4 +242,69 @@ h1.contact-container__title {
 
 }
 
+.navscroll{
+    overflow: auto;
+}
+
+.contact-container{
+
+  overflow: auto;
+}
+
+.contactright{
+  display: block;
+  float: right;
+      position: relative;
+}
+
+.logo.main{
+  width: 220px;
+  position: absolute;
+  display: block;
+  float: right;
+  left: 42.6%;
+  top: 2%;
+
+}
+
+.aboutText{
+  background-color: #3D3D3D;
+  color: #FFFFFF;
+  height: 100%;
+  margin-top: -66px;
+  float: right;
+}
+.aboutText p{
+  padding: 2rem;
+  width: 60%;
+  margin-right: 62px;
+  float: right;
+  min-width: 375px;
+  font-size: 18px;
+  line-height: 36px;
+  position: relative;
+  z-index: 99;
+}
+
+
+.logoWrap{
+  z-index: 88888;
+  position: relative;
+
+}
+
+.logo-about{
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+    padding: 1rem 0;
+height: 100px;
+}
+.about-container{
+
+  overflow: auto;
+}
+
+
+
+
 /*# sourceMappingURL=style.css.map */
