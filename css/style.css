@@ -17,7 +17,7 @@
 
 .navbar-about {
   background: #fff;
-  display: initial;
+  display: table;
 }
 
 .navbar-about__item {
