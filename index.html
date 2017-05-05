@@ -24,7 +24,7 @@
 
 <body>
 	<!-- navigation -->
-	<nav class="pages-nav">
+	<nav class="pages-nav navscroll">
 		<div id="home_btn" class="pages-nav__item"><img class="motto-navbar" src="images/motto-1.svg" alt=""></div>
 		<div id="about_btn" class="pages-nav__item"><img class="logo-navbar" src="Assets/logo.svg" alt=""></div>
 		<div id="contact_btn" class="pages-nav__item"><img class="motto2-navbar" src="images/motto-2.svg" alt=""></div>
@@ -54,9 +54,9 @@
 			<diV style="height: 80%;">
 				<a-scene>
 					<a-assets>
-		        <img id="checkerboard" src="/images/texture01.jpg">
-		        <img id="yellowmetallic" src="/images/yellowmetalic.jpg">
-		        <img id="space" src="/images/space.jpg">
+		        <img id="checkerboard" src="images/texture01.jpg">
+		        <img id="yellowmetallic" src="images/yellowmetalic.jpg">
+		        <img id="space" src="images/space.jpg">
 		      </a-assets>
 		      <!-- Pacman -->
 		      <a-cylinder position="-4 3 -5" rotation="65 45 0" radius="1" height="1" theta-start="57" wireframe="true" wireframe-linewidth="10"
@@ -85,7 +85,7 @@
 		      <a-cylinder position="4 0 -5" rotation="45 -45 0" radius="2" height="0.5"
 		                  segments-radial="64" color="#FFF" metalness=".1"></a-cylinder>
 		      <a-sky id="image-360" radius="360" src="#space"></a-sky>
-					<a-entity camera="userHeight: 1.6" look-controls></a-entity>
+					<a-entity camera="userHeight: 1.6" look-controls position=" 0 0 1"></a-entity>
 				</a-scene>
 
 			</div>
@@ -106,17 +106,19 @@
 					</div>
 			</div>
 			<div class="about-container">
-				<div class="about-container__graphic">
-					<img class="" src="Assets/lines.gif" alt="">
+				<div class="logoWrap four columns navbar-about__item">
+					<img class="logo-about" src="images/logo-navbar.svg" alt="">
 				</div>
-				<div class="about-container__description">
-					<p>In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble. While NASA has had many ups and downs, the launch and continued operation of the Hubble space telescope probably ranks next to the moon landings and the development of the Space Shuttle as one of the greatest space exploration.</p>
+
+				<div class="aboutText about-container__description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim dictum lacus sit amet placerat.
+						Ut dolor lectus, imperdiet in quam ac, dictum interdum neque. Praesent tempus lorem ut mollis malesuada.
+						 In pretium diam arcu. Vestibulum elementum, risus rutrum tempus vulputate, magna massa sagittis nulla,
+						 vel interdum justo enim vitae urna. Nulla ac posuere nunc, pellentesque mollis libero. Vestibulum faucibus sapien et risus venenatis,
+						 sodales pharetra erat consectetur.</p>
 				</div>
-				<p class="about-container__phrase">
-					ON PHOTOGRAPHY <br>
-					& <br>
-					CONTEMPORARY IMAGE
-				</p>
+				<!-- <p class="about-container__phrase">
+				</p> -->
 			</div>
 		</div>
 
@@ -137,14 +139,13 @@
 				<div class="contact-container__graphic">
 					<!-- <img class="" src="Assets/lines.gif" alt="">		 -->
 				</div>
-
-				<div class="logoWrapper"><img src="Assets/logo_white.svg" class="logo contact"></div>
+				<!-- <div class="logoWrapper"><img src="Assets/logo_white.svg" class="logo contact"></div> -->
 				<div style="background:#3D3D3D"  class="contact-container__left">
 					<div class="wireframe_wrap">
 							<img class="svg_wireframe" src="images/wireframe_w.svg" alt="~">
 					</div>
 				</div>
-				<div class="contact-container__right">
+				<div class="contactright contact-container__right">
 				</div>
 			</div>
 		</div>
