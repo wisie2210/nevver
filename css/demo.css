@@ -21,7 +21,8 @@
 
 /* Main styles */
 body {
-  background: linear-gradient(45deg, #fff, #dfdaf4);
+  background: url(../Assets/space.jpg);
+  background-size: cover;
   color: #fff;
   font-family: 'Neue Haas Unica', Helvetica, Arial, sans-serif;
   margin: 0;
