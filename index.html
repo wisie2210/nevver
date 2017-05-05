@@ -25,9 +25,15 @@
 <body>
 	<!-- navigation -->
 	<nav class="pages-nav">
+		<div id="home_btn" class="pages-nav__item"><img class="motto-navbar" src="images/motto-1.svg" alt=""></div>
+		<div id="about_btn" class="pages-nav__item"><img class="logo-navbar" src="Assets/logo.svg" alt=""></div>
+		<div id="contact_btn" class="pages-nav__item"><img class="motto2-navbar" src="images/motto-2.svg" alt=""></div>
 		<div id="home_btn" class="pages-nav__item"><a class="link link--page" href="#page-home">Home</a></div>
+
 		<div id="about_btn" class="pages-nav__item"><a class="link link--page" href="#page-about">About</a></div>
+
 		<div id="contact_btn" class="pages-nav__item"><a  class="link link--page" href="#page-contact">Contact</a></div>
+
 		<div class="pages-nav__item pages-nav__item--social">
 			<a class="link link--social link--faded" href="#"><i class="fa fa-facebook"></i><span class="text-hidden">Facebook</span></a>
 			<a class="link link--social link--faded" href="#"><i class="fa fa-instagram"></i><span class="text-hidden">Instagram</span></a>
@@ -41,6 +47,7 @@
 		<div class="page" id="page-home">
 			<!-- Blueprint header -->
 			<!-- <header class="bp-header cf">			</header> -->
+
 			<div class="headerWrapper">
 				<img style="z-index: 8888" src="Assets/logo_white.svg" class="logo main">
 			</div>
@@ -83,11 +90,22 @@
 
 			</div>
 			<!-- <iframe style="width: 100%; height: 100%; border: 0px solid;" src="../app/index.html"></iframe> -->
+
 		</div>
 		<!-- /page -->
 		<div class="page" id="page-about">
+			<div class="container navbar-about">
+					<div class="four columns navbar-about__item">
+						<img class="motto-navbar" src="images/motto-1.svg" alt="">
+					</div>
+					<div class="four columns navbar-about__item">
+						<img class="logo-navbar-about" src="images/logo-navbar.svg" alt="">
+					</div>
+					<div class="four columns navbar-about__item">
+						<img class="motto2-navbar" src="images/motto-2.svg" alt="">
+					</div>
+			</div>
 			<div class="about-container">
-				<img src="Assets/logo.svg" class="about-container__logo">
 				<div class="about-container__graphic">
 					<img class="" src="Assets/lines.gif" alt="">
 				</div>
@@ -108,6 +126,7 @@
 				<div class="contact-container__graphic">
 					<!-- <img class="" src="Assets/lines.gif" alt="">		 -->
 				</div>
+
 				<div class="logoWrapper"><img src="Assets/logo_white.svg" class="logo contact"></div>
 				<div style="background:#3D3D3D"  class="contact-container__left">
 					<div class="wireframe_wrap">
@@ -118,7 +137,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<!-- /pages-stack -->
 	<button class="menu-button"><span>Menu</span></button>
