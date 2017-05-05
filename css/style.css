@@ -180,4 +180,11 @@
   background: none;
   bottom: 10%; }
 
+  .headerWrapper{
+    width: 100%;
+    position: absolute;
+    height: 10%;
+    background: transparent;
+    }
+
 /*# sourceMappingURL=style.css.map */
