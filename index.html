@@ -23,9 +23,15 @@
 <body>
 	<!-- navigation -->
 	<nav class="pages-nav">
+		<div id="home_btn" class="pages-nav__item"><img class="motto-navbar" src="images/motto-1.svg" alt=""></div>
+		<div id="about_btn" class="pages-nav__item"><img class="logo-navbar" src="Assets/logo.svg" alt=""></div>
+		<div id="contact_btn" class="pages-nav__item"><img class="motto2-navbar" src="images/motto-2.svg" alt=""></div>
 		<div id="home_btn" class="pages-nav__item"><a class="link link--page" href="#page-home">Home</a></div>
+
 		<div id="about_btn" class="pages-nav__item"><a class="link link--page" href="#page-about">About</a></div>
+
 		<div id="contact_btn" class="pages-nav__item"><a  class="link link--page" href="#page-contact">Contact</a></div>
+
 		<div class="pages-nav__item pages-nav__item--social">
 			<a class="link link--social link--faded" href="#"><i class="fa fa-facebook"></i><span class="text-hidden">Facebook</span></a>
 			<a class="link link--social link--faded" href="#"><i class="fa fa-instagram"></i><span class="text-hidden">Instagram</span></a>
@@ -40,12 +46,22 @@
 			<!-- Blueprint header -->
 			<!-- <header class="bp-header cf">			</header> -->
 			<img src="Assets/logo_white.svg" class="logo main">
-			<iframe style="width: 100%; height: 100%; border: 0px solid;" src="../aframe-master/examples/primitives/cylinders/index.html"></iframe>
+			<iframe style="width: 100%; height: 100%; border: 0px solid;" src="aframe-master/examples/primitives/cylinders/index.html"></iframe>
 		</div>
 		<!-- /page -->
 		<div class="page" id="page-about">
+			<div class="container navbar-about">
+					<div class="four columns navbar-about__item">
+						<img class="motto-navbar" src="images/motto-1.svg" alt="">
+					</div>
+					<div class="four columns navbar-about__item">
+						<img class="logo-navbar-about" src="images/logo-navbar.svg" alt="">
+					</div>
+					<div class="four columns navbar-about__item">
+						<img class="motto2-navbar" src="images/motto-2.svg" alt="">
+					</div>
+			</div>
 			<div class="about-container">
-				<img src="Assets/logo.svg" class="about-container__logo">
 				<div class="about-container__graphic">
 					<img class="" src="Assets/lines.gif" alt="">
 				</div>
@@ -62,12 +78,21 @@
 
 		<div class="page" id="page-contact">
 			<div class="contact-container">
-				<h1 class="contact-container__title"><a id="contact_anim" href="mailto:info@newwer.mx?Subject=Info" target="_top">info@ne<span>v</span><span class="mid-span">v</span><span>v</span>er.mx</a></h1>
+				<div class="container navbar-about">
+						<div class="four columns navbar-about__item">
+							<img class="motto-navbar" src="images/motto-1.svg" alt="">
+						</div>
+						<div class="four columns navbar-about__item">
+							<img class="logo-navbar-about" src="images/logo-navbar.svg" alt="">
+						</div>
+						<div class="four columns navbar-about__item">
+							<img class="motto2-navbar" src="images/motto-2.svg" alt="">
+						</div>
+				</div>
 				<div class="contact-container__graphic">
 					<img class="" src="Assets/lines.gif" alt="">
-				</div>
-				<h1 class="contact-container__title"><a href="mailto:info@nevver.mx?Subject=Info" target="_top">info@nevver.mx</a></h1>
-
+				</div>x
+				<h1 class="contact-container__title"><a id="contact_anim" href="mailto:info@newwer.mx?Subject=Info" target="_top">info@ne<span>v</span><span class="mid-span">v</span><span>v</span>er.mx</a></h1>
 
 				<div class="logoWrapper"><img src="Assets/logo_white.svg" class="logo contact"></div>
 				<div class="contact-container__left">
