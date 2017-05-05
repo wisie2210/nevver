@@ -60,8 +60,15 @@
 
       <a-sky id="image-360" radius="360" src="#space"></a-sky>
       <!-- <a-entity template="src: #link" data-src="#space" data-thumb="#space-thumb"></a-entity> -->
-      <a-entity camera="userHeight: 1.6" look-controls>
+      <a-entity camera look-controls position="0 1 1">
         <!-- <a-camera></a-camera> -->
+        <a-cursor  color="#fff" id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: black"
+          event-set__2="_event: mouseleave; color: white"
+          fuse="true"
+          raycaster="objects: .link"></a-cursor>
 
           </a-entity>
 
